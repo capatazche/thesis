@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Consent Form</title>
+	<script type="text/javascript" src="consentJs.js"></script>
+	<link rel="stylesheet" href="myCss.css">
+	
+	<!-- Bootstrap -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="row">
+		<div class="col-md" style="display: block; text-align:center; padding-top: 25px; padding-bottom: 25px;">
+			<form style="width: 70%; display: inline-block; text-align: left; background: linear-gradient(to bottom right, rgb(255, 204, 204), rgb(153, 255, 204));">
+				<div class="text-center">
+					<label>General Information and Consent</label>
+				</div>
+				
+				<label>The purpose of this research is to better understand the skills that are associated with programming. This is a research project being conducted by Bernardo Villalba Cahue at University College London. If you have any experience programming, you are invited to participate.</label>
+				
+				<label>Your participation in this research study is voluntary. You may choose not to participate. If you decide to participate, you may withdraw at any time. Furthermore, if you decide not to participate or withdraw from participating at any time, you will not be penalized in any way or form.</label>
+				
+				<label>The procedure involves filling an online survey divided into two sections. The whole process takes approximately 60 minutes.</label> <br>
+			
+				<label>Confidentiality:</label> <br>
+			
+				<label>This test does not collect identifying information such as your name, email address, or IP address. Therefore, your responses will remain anonymous.</label> <br>
+				
+				<label>Contact:</label> <br>
+				
+				<label>If you have questions at any time about the study or the procedures, you may contact me via email at b.cahue.17@ucl.ac.uk.</label> <br>
+				
+				<label>Consent:</label> <br>
+				
+				<label>- You have read the above information.</label> <br>
+				<label>- You voluntarily agree to participate.</label>
+				<!-- <label>- You are 18 years of age or older.</label> -->
+				
+				<fieldset id="consentFieldSet">
+					<input type="radio" id="agreeRB" name="consentFieldSet" style="display: inline;"> <label for="agreeRB" style="display: inline;">Agree</label>
+				</fieldset>
+				
+				<br>
+				<button type="button" class="btn btn-primary" onclick="checkConsentAnswer()">Continue</button>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

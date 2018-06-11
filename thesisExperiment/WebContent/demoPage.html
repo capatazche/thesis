@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+ 
+<!-- Add two more questions? How long since last programmed and how long since last programming interview --> 
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Demographics</title>
+	<script type="text/javascript" src="demoJs.js"></script>
+	<link rel="stylesheet" href="myCss.css">
+	
+	<!-- Bootstrap -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div style="display: block; text-align:center; padding-top: 25px; padding-bottom: 25px;">
+		<form style="width: 70%; display: inline-block; text-align: left; background: linear-gradient(to bottom right, rgb(255, 204, 204), rgb(153, 255, 204));" id="demoForm">
+		
+			<div class="row">
+				<div class="col-md text-center">	
+					<label>Demographics</label>
+				</div>
+			</div>
+		
+			<div class="row">
+				
+				<div class="col-md">
+					<fieldset id="english1stLang">
+						<label>Is English your first language?</label> <br>
+						<div class="form-check-inline">
+							<label class="form-check-label">
+								<input type="radio" id="engYes" name="english1stLang" onclick="englishFirstLang()" class="form-check-input"> Yes
+							</label>
+						</div>
+						<div class="form-check-inline">
+							<label class="form-check-label">
+								<input type="radio" id="engNo" name="english1stLang" onclick="englishSecondLang()" class="form-check-input"> No
+							</label>
+						</div>
+					</fieldset>
+					<br>
+					
+					<div id="englishProficiency">
+						
+					</div>
+					
+					<fieldset id="ageGroup">
+						<label>Age</label> <br>
+						<input type="number" min="0" value="0">
+					</fieldset>
+					<br>
+				</div>
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-md">
+				
+					<fieldset id="genderFieldSet">
+						<label>Gender</label> <br>
+						<div class="form-check-inline">
+							<label class="form-check-label">
+								<input type="radio" id="genderMale" name="genderFieldSet" class="form-check-input"> Male
+							</label>
+						</div>
+						<div class="form-check-inline">
+							<label class="form-check-label">
+								<input type="radio" id="genderFemale" name="genderFieldSet" class="form-check-input"> Female
+							</label>
+						</div>
+						<div class="form-check-inline">
+							<label class="form-check-label">
+								<input type="radio" id="genderUndisclosed" name="genderFieldSet" class="form-check-input"> Undisclosed
+							</label>
+						</div>
+					</fieldset>
+					<br>
+					
+					<fieldset>				
+						<label>How many years of programming experience do you have?</label> <br>
+						<input type="number" min="0" value="0">
+					</fieldset>
+					<br>
+					
+					<fieldset>
+						<label>Highest Degree df Education</label> <br>
+						<select>
+							<option value="highSchool">High School</option>
+							<option value="bachelors">Bachelor's Degree</option>
+							<option value="masters">Master's Degree</option>
+							<option value="phd">Ph.D.</option>
+						</select>
+					</fieldset>
+					<br>
+					
+					<!-- Suggested range taken from https://www.surveygizmo.com/resources/blog/how-to-write-better-demographic-questions/ -->
+					<fieldset>
+						<label>Salary Range</label> <br>
+						<select>
+							<option value="less20k">Less than $20,000</option>
+							<option value="20kTo34k">$20,000 to $34,999</option>
+							<option value="35kTo49k">$35,000 to $49,999</option>
+							<option value="50kTo74k">$50,000 to $74,999</option>
+							<option value="75kTo99k">$75,000 to $99,999</option>
+							<option value="over100k">Over $100,000</option>
+						</select>
+					</fieldset>
+					<br>
+				
+				</div>
+			
+			</div>
+			
+			<button type="button" class="btn btn-primary" onclick="doneWithDemoGoToGalt()">Continue</button>
+		</form>
+	</div>
+		
+	
+	<script type="text/javascript">
+		document.getElementById('enlgish2ndLang').style.visibility = 'hidden';
+	</script>
+</body>
+
+</html>

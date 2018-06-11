@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>University of Kent Test</title>
+	<script type="text/javascript" src="kentTestJs.js"></script>
+	<link rel="stylesheet" href="myCss.css">
+	
+	<!-- Bootstrap -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div style="display: block; text-align:center; padding-top: 25px; padding-bottom: 25px;">
+		<form style="width: 70%; display: inline-block; text-align: left;">
+		
+			<div class="row">
+				<div class="col-md" style="text-align: right;">
+					<p id="timer"></p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md">
+					<div class="text-center">		
+						<label id="questionNumberLbl"></label>
+					</div>
+				</div>
+			</div>
+			
+			<!-- This div is for aiding images -->
+			<div class="row">
+				<div class="col-md" id="imageSection">
+					
+				</div>
+			</div>
+			
+			<br>
+			
+			<div class="row">
+				<div class="col-md" id="questionSectionDiv">
+					<label id="problemLbl"></label><br>
+					<label id="questionLbl"></label><br>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md">
+					<fieldset id="answerFieldSet">						
+						<input type="radio" id="a1RB" name="answerFieldSet" style="display: inline;"><label id="a1Lbl" for="a1RB"></label><br>
+						<input type="radio" id="a2RB" name="answerFieldSet" style="display: inline;"><label id="a2Lbl" for="a2RB"></label><br>
+						<input type="radio" id="a3RB" name="answerFieldSet" style="display: inline;"><label id="a3Lbl" for="a3RB"></label><br>
+						<input type="radio" id="a4RB" name="answerFieldSet" style="display: inline;"><label id="a4Lbl" for="a4RB"></label><br>
+						<input type="radio" id="a5RB" name="answerFieldSet" style="display: inline;"><label id="a5Lbl" for="a5RB"></label><br>
+						<input type="radio" id="a6RB" name="answerFieldSet" style="display: inline;"><label id="a6Lbl" for="a6RB"></label>
+					</fieldset>
+					
+					<br>
+					
+					<button type="button" class="btn btn-primary" onclick="setKentQuestion()">Continue</button>
+				</div>
+			</div>
+		</form>	
+	</div>
+	
+	<script type="text/javascript">
+		setKentQuestion();
+		
+		var distance = 25000*60;
+		
+		var x = setInterval(function() {
+			
+			distance = distance - 1000;
+
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
+
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("timer").innerHTML = "EXPIRED";
+				location.href = "finalHtml.html";
+			}
+			
+		}, 1000);
+		
+	</script>
+</body>
+
+</html>

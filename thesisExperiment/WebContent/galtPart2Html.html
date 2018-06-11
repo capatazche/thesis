@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Galt Part 2</title>
+	<script type="text/javascript" src="galtPart2Js.js"></script>
+	<link rel="stylesheet" href="myCss.css">
+	
+	<!-- Bootstrap -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div style="display: block; text-align:center; padding-top: 25px; padding-bottom: 25px;">
+		<form style="width: 70%; display: inline-block; text-align: left;">
+			<div class="row">
+				<div class="col-md">
+					<div class="text-center">		
+						<label id="questionNumberLbl">Question #11</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">			
+				<div class="col-md" id="rightDivOfGaltPart2">
+					<label>After supper, some students decide to go dancing. There are three boys: Albert (A), Bob (B), and Charles (C), and three girls: Louise (L), Mary (M), and Nancy (N).</label>
+					
+					<div class="text-center">
+						<img alt="Image of 3 boys and three girls" src="images/people.jpg" style="max-width: 90%;">
+					</div><br>
+					
+					<label>One possible pair of dance partners is A-L, which means Albert and Louise.</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md">
+					
+					<fieldset>
+						<label id="labelForLast2Questions">List all other possible couples of dancers. Boys do not dance with boys, and girls do not dance with girls.</label>
+						<br>
+						<textarea id="textAreaForLast2Questions" type="text" style="width: 90%;"></textarea>
+					</fieldset>
+					
+					<button type="button" class="btn btn-primary" onclick="goToLastQuestion()">Continue</button>
+					
+				</div>
+			</div>			
+			
+		</form>
+	</div>
+</body>
+
+</html>
