@@ -400,7 +400,7 @@ function setKentQuestion(){
 			
 		default:
 			
-			location.href = "finalHtml.html";
+			location.href = "pseudoCodeQuestion.html";
 			
 			break;
 	}
