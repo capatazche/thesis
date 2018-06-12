@@ -81,14 +81,8 @@
 					</fieldset>
 					<br>
 					
-					<fieldset>				
-						<label>How many years of programming experience do you have?</label> <br>
-						<input type="number" min="0" value="0">
-					</fieldset>
-					<br>
-					
 					<fieldset>
-						<label>Highest Degree df Education</label> <br>
+						<label>Highest Degree of Education</label> <br>
 						<select>
 							<option value="highSchool">High School</option>
 							<option value="bachelors">Bachelor's Degree</option>
@@ -98,19 +92,49 @@
 					</fieldset>
 					<br>
 					
-					<!-- Suggested range taken from https://www.surveygizmo.com/resources/blog/how-to-write-better-demographic-questions/ -->
 					<fieldset>
-						<label>Salary Range</label> <br>
+						<label>Where does most of your programming experience come from?</label> <br>
 						<select>
-							<option value="less20k">Less than $20,000</option>
-							<option value="20kTo34k">$20,000 to $34,999</option>
-							<option value="35kTo49k">$35,000 to $49,999</option>
-							<option value="50kTo74k">$50,000 to $74,999</option>
-							<option value="75kTo99k">$75,000 to $99,999</option>
-							<option value="over100k">Over $100,000</option>
+							<option value="onlineCourses">Online Courses</option>
+							<option value="academicCourses">Academic Courses</option>
+							<option value="proffesionalExperience">Professional Experience</option>
 						</select>
 					</fieldset>
 					<br>
+					
+					<fieldset>				
+						<label>How many years of programming experience do you have?</label> <br>
+						<input type="number" min="0" value="0">
+					</fieldset>
+					<br>
+					
+					<fieldset id="currentStatusFieldSet">
+						<label>What is your current status?</label> <br>
+						<div class="form-check-inline">
+							<label class="form-check-label">
+								<input type="radio" id="workingStatus" name="currentStatusFieldSet" class="form-check-input" onclick="changeInStatus()"> Employed
+							</label>
+						</div>
+						<div class="form-check-inline">
+							<label class="form-check-label">
+								<input type="radio" id="studentStatus" name="currentStatusFieldSet" class="form-check-input" onclick="changeInStatus()"> Student
+							</label>
+						</div>
+						<div class="form-check-inline">
+							<label class="form-check-label">
+								<input type="radio" id="neitherStatus" name="currentStatusFieldSet" class="form-check-input" onclick="changeInStatus()"> Neither
+							</label>
+						</div>
+					</fieldset>
+					<br>
+					
+					<div id="countryEmployedIn">
+								
+					</div>
+					
+					<div id="salaryRange">
+						
+					</div>			
 				
 				</div>
 			
